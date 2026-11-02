@@ -11,8 +11,37 @@ Of the 210 test case estimates: **Estimated value for each test case = Total num
 | Illustrative cost per case (USD) | ~$0.0232 | ~$0.9802 | ~$0.00060 + unrecorded thinking | ~$0.00294 + unrecorded thinking |
 | Illustrative API cost per case with assumed thinking usage (USD) | Not applicable | Not applicable | ~$0.00410–0.01110 | ~$0.0197–0.0533 |
 
-**Timing and tokens.** Elapsed time includes the loading and waiting overhead present in the original run totals. Suite-level medians are not converted into case-level medians. API thinking tokens were not recorded; approximately 177,000 API input tokens were estimated with Qwen's tokenizer rather than provider billing metadata. Output counts therefore have different coverage across models.
+**Timing.** Qwen's slowness is primarily due to two reasons:
 
-**Cost assumptions.** Local runs used allocated GPU resources without a per-run charge. Local dollar amounts are hypothetical GPU rental equivalents at $5.07 per GPU-hour, excluding host and storage costs. API estimates use input/output rates per million tokens of $0.30/$2.50 for Flash and $2/$12 for Pro, with thinking billed as output. The last row assumes 1,000–3,000 thinking tokens for each of the 294 underlying suite-level calls, then allocates the resulting cost over 210 cases; it does not assume 630 new calls. These are estimates, not invoices. Rates: [Google Cloud pricing](https://cloud.google.com/vertex-ai/generative-ai/pricing).
+It doesn't use an accelerated inference framework; it uses ordinary HF transformers to generate inference tokens one by one, with fallback warnings in the logs.如果用了加速器可以降低到大约XX
 
-**Scope.** These averages describe the recorded deployment: standard Hugging Face Transformers generation, long Qwen reasoning outputs, and reported DeepSeek tokenization/whitespace problems. They do not establish intrinsic model speed or a general cost advantage for local or API deployment.
+The thought process is lengthy, with 12% of calls being truncated at the 9000-token limit.
+
+Therefore, this only represents the speed under "our deployment configuration."
+
+**Local model.** Based on the on-demand price of approximately $5.07/hour for one A100-80GB GPU on Google Cloud.
+
+We don't actually spend any money running it on Berzelius; this is the cost converted to "renting a cloud GPU".
+
+Cheaper cloud providers offer A100-80GB starting at around $0.89/hour, which would put Qwen at around $36 and DeepSeek at around $0.9.
+**API Model.** Pricing:
+
+Gemini-2.5-Flash: Input $0.30/million tokens, Output $2.50/million tokens (Thinking tokens are charged based on the output price);
+
+Gemini-3.1-Pro: Input $2/million tokens, Output $12/million tokens.
+
+The table only calculates visible outputs; thinking tokens were not recorded at the time. Estimating an average of 1,000–3,000 thinking tokens per call (298 suites × 3 times = 294 calls):
+
+Flash total approximately $0.9–2.3;
+
+Pro total approximately $4.2–11.2.
+
+Input tokens are counted uniformly using Qwen's tokenizer; actual Gemini pricing may vary slightly.
+
+**Price sources.**  compiled by third parties; it is recommended to verify with Google's official pricing page before formally citing:
+Gemini 3.1 Pro Preview on Vertex – getmaxim.ai
+Gemini 2.5 Flash on Vertex – getmaxim.ai
+Gemini API pricing – ai.google.dev
+A100 80GB pricing – beam.cloud
+A100 80GB cloud prices – amcompute.com
+GCP GPU pricing – cloud.google.com

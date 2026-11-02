@@ -1,6 +1,6 @@
 # Estimated Inference Consumption per Test Case
 
-These estimates allocate the existing totals from 98 source suites across 210 test cases: **per-case estimate = aggregate total / 210**. They are amortized averages, not measured case-level latencies or a new run of the current comparison script. Alignment counts follow [manual_review.xlsx](../Data/Comparison_Results/manual_review.xlsx).
+Of the 210 test case estimates: **Estimated value for each test case = Total number / 210**. These are amortized averages, not measured test case-level latency or the results of a new run of the current comparison script.
 
 | Metric | DeepSeek-LLM-7B-Chat | Qwen 3.5-27B | Gemini 2.5 Flash | Gemini 3.1 Pro Preview |
 |---|---:|---:|---:|---:|

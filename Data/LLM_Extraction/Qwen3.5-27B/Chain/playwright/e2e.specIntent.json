@@ -1,0 +1,36 @@
+{
+  "test_case_id": "tc_e2e_spec",
+  "source_file": "dataset/raw/playwright/e2e.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:32:51.085343",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "test_cases": [
+    {
+      "test_case": "e2e.spec_1",
+      "objects": [
+        "page"
+      ],
+      "goals": [
+        "Verify users can navigate to a post page and view its content",
+        "Verify users can access the blog list page"
+      ],
+      "activities": [
+        "Navigate to a post page and view its content.",
+        "Navigate to the blog list page."
+      ]
+    },
+    {
+      "test_case": "e2e.spec_2",
+      "objects": [
+        "page"
+      ],
+      "goals": [
+        "Verify users can access the blog list page and see all posts"
+      ],
+      "activities": [
+        "Open the blog list page and check that all posts are shown."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "test_case_id": "tc_test_",
+  "source_file": "dataset/raw/pytest_unit/test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-05-13T20:20:30.244925",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "test_cases": [
+    {
+      "test_case": "test__1",
+      "objects": [
+        "response content"
+      ],
+      "goals": [
+        "Verify the client correctly retrieves and returns response content and headers from the backend service"
+      ],
+      "activities": [
+        "retrieves and returns response content"
+      ]
+    },
+    {
+      "test_case": "test__2",
+      "objects": [
+        "path"
+      ],
+      "goals": [
+        "Verify the client correctly forwards HTTP request parameters (path, headers) to the backend service"
+      ],
+      "activities": [
+        "Verify the client correctly forwards HTTP request parameters (path) to the backend service"
+      ]
+    },
+    {
+      "test_case": "test__3",
+      "objects": [
+        "headers"
+      ],
+      "goals": [
+        "Verify the client correctly forwards HTTP request parameters (path, headers) to the backend service",
+        "Verify the client correctly retrieves and returns response content and headers from the backend service"
+      ],
+      "activities": [
+        "Verify the client correctly forwards HTTP request parameters (headers) to the backend service",
+        "Verify the client correctly retrieves and returns response headers from the backend service"
+      ]
+    }
+  ]
+}

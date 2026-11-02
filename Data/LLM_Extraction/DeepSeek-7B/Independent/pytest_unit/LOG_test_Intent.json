@@ -1,0 +1,54 @@
+{
+  "test_case_id": "tc_LOG_test_",
+  "source_file": "dataset/raw/pytest_unit/LOG_test_.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:55:41.925185",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "test_cases": [
+    {
+      "test_case": "LOG_test__1",
+      "objects": [
+        "LOG",
+        "Vector"
+      ],
+      "goals": [
+        "Verify LOG with two Vector inputs."
+      ],
+      "activities": [
+        "Call LOG with two Vector inputs.",
+        "Compare the result using np.testing.assert_allclose."
+      ]
+    },
+    {
+      "test_case": "LOG_test__2",
+      "objects": [
+        "LOG",
+        "Vector",
+        "Scalar"
+      ],
+      "goals": [
+        "Verify LOG with a Vector and a Scalar."
+      ],
+      "activities": [
+        "Call LOG with a Vector and a Scalar.",
+        "Compare the result using np.testing.assert_allclose."
+      ]
+    },
+    {
+      "test_case": "LOG_test__3",
+      "objects": [
+        "LOG",
+        "Vector",
+        "OrderedPair"
+      ],
+      "goals": [
+        "Verify LOG with an OrderedPair and a Vector."
+      ],
+      "activities": [
+        "Call LOG with an OrderedPair and a Vector.",
+        "Compare the result using np.testing.assert_allclose."
+      ]
+    }
+  ]
+}

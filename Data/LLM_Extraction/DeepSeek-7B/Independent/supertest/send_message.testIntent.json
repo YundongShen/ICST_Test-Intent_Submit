@@ -1,0 +1,37 @@
+{
+  "test_case_id": "tc_send_message_test",
+  "source_file": "dataset/raw/supertest/send_message.test.js",
+  "framework": "supertest",
+  "extraction_timestamp": "2026-08-10T08:00:30.809072",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "test_cases": [
+    {
+      "test_case": "send_message.test_1",
+      "objects": [
+        "createServer",
+        "request",
+        "app",
+        "request"
+      ],
+      "goals": [
+        "verifythattheserverrespondswith400whenasendmessagewithnametohjohnisforced"
+      ],
+      "activities": [
+        "verifythattheserverrespondswith400whenasendmessagewithnametohjohnisforced"
+      ]
+    },
+    {
+      "test_case": "send_message.test_2",
+      "objects": [
+        "createServer",
+        "request",
+        "app",
+        "request",
+        "data"
+      ],
+      "goals": [],
+      "activities": []
+    }
+  ]
+}

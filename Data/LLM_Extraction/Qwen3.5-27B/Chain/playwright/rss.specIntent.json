@@ -1,0 +1,48 @@
+{
+  "test_case_id": "tc_rss_spec",
+  "source_file": "dataset/raw/playwright/rss.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-13T19:41:07.622357",
+  "extract_mode": "chain",
+  "model": "Qwen-3.5-27B",
+  "test_cases": [
+    {
+      "test_case": "rss.spec_1",
+      "objects": [
+        "rss"
+      ],
+      "goals": [
+        "Check that the RSS link Locator object is truthy."
+      ],
+      "activities": [
+        "Navigate to /",
+        "Create a Locator for the link whose accessible name is \"RSS\"",
+        "Assert that the Locator object is truthy using toBeTruthy; this does not verify that the link exists in the DOM"
+      ]
+    },
+    {
+      "test_case": "rss.spec_2",
+      "objects": [
+        "pages[1]"
+      ],
+      "goals": [
+        "Verify the RSS feed link navigates to the correct URL in a new tab"
+      ],
+      "activities": [
+        "Follow the RSS feed link and check the URL of the new tab."
+      ]
+    },
+    {
+      "test_case": "rss.spec_3",
+      "objects": [
+        "feed"
+      ],
+      "goals": [
+        "Verify the RSS feed content is valid XML"
+      ],
+      "activities": [
+        "Retrieve the RSS feed and check that its content is valid XML."
+      ]
+    }
+  ]
+}

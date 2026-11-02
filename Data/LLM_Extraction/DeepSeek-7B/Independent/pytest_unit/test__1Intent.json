@@ -1,0 +1,55 @@
+{
+  "test_case_id": "tc_test__1",
+  "source_file": "dataset/raw/pytest_unit/test__1.py",
+  "framework": "pytest_unit",
+  "extraction_timestamp": "2026-08-10T07:55:56.736197",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "test_cases": [
+    {
+      "test_case": "test__1_1",
+      "objects": [
+        "myCode",
+        "myCode.BASE_URL",
+        "myCode.build_url"
+      ],
+      "goals": [
+        "verifythatthebuild_urlmethodbuildsamarkedURLwiththecorrectminPriceandmaxPriceparameters"
+      ],
+      "activities": [
+        "test_build_url",
+        "myCode.build_url",
+        "mockdemo.myCode.BASE_URL.return_value"
+      ]
+    },
+    {
+      "test_case": "test__1_2",
+      "objects": [
+        "myCode",
+        "myCode.get_meaning_of_life"
+      ],
+      "goals": [
+        "Verify that get_meaning_of_life calls calculate_meaning_of_life."
+      ],
+      "activities": [
+        "Set the mocked return value of calculate_meaning_of_life.",
+        "Call myCode.get_meaning_of_life."
+      ]
+    },
+    {
+      "test_case": "test__1_3",
+      "objects": [
+        "myCode",
+        "myCode.DataLoader",
+        "myCode.get_product"
+      ],
+      "goals": [
+        "Verify that get_product loads a product with the expected wibble attribute."
+      ],
+      "activities": [
+        "Set the mocked return value of DataLoader.load_product.",
+        "Call myCode.get_product."
+      ]
+    }
+  ]
+}

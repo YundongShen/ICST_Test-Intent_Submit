@@ -1,0 +1,24 @@
+{
+  "test_case_id": "tc_CountryResourceTest",
+  "source_file": "dataset/raw/junit_spring/CountryResourceTest.java",
+  "framework": "junit_spring",
+  "extraction_timestamp": "2026-08-10T07:59:18.824740",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "test_cases": [
+    {
+      "test_case": "CountryResourceTest",
+      "objects": [
+        "TestRestTemplate",
+        "LocalServerPort",
+        "CountryResource"
+      ],
+      "goals": [
+        "Verify that CountryResource returns the expected countries, including Brasil and Brazil."
+      ],
+      "activities": [
+        "Request the country data and check that the response contains Brasil and Brazil."
+      ]
+    }
+  ]
+}

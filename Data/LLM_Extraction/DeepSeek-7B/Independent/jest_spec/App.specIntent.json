@@ -1,0 +1,49 @@
+{
+  "test_case_id": "tc_App_spec",
+  "source_file": "dataset/raw/jest_spec/App.spec.js",
+  "framework": "jest_spec",
+  "extraction_timestamp": "2026-08-10T07:49:14.382183",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "test_cases": [
+    {
+      "test_case": "App.spec_1",
+      "objects": [
+        "App",
+        "Vue",
+        "render",
+        "getByText",
+        "toBeDefined"
+      ],
+      "goals": [
+        "Verify that App renders correctly."
+      ],
+      "activities": [
+        "Render App.",
+        "Locate text using getByText.",
+        "Check that the located element is defined using toBeDefined."
+      ]
+    },
+    {
+      "test_case": "App.spec_2",
+      "objects": [
+        "App",
+        "count",
+        "render",
+        "fireEvent",
+        "at",
+        "toEqual"
+      ],
+      "goals": [
+        "Verify that the count increments correctly."
+      ],
+      "activities": [
+        "Render App.",
+        "Select an element using at.",
+        "Check that the selected element is defined using toBeDefined.",
+        "Trigger an interaction using fireEvent.",
+        "Check the count using toEqual."
+      ]
+    }
+  ]
+}

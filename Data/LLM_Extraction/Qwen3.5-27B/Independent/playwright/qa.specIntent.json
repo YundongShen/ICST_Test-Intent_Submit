@@ -1,0 +1,68 @@
+{
+  "test_case_id": "tc_qa_spec",
+  "source_file": "dataset/raw/playwright/qa.spec.ts",
+  "framework": "playwright",
+  "extraction_timestamp": "2026-05-02T01:39:31.864450",
+  "extract_mode": "independent",
+  "model": "Qwen-3.5-27B",
+  "test_cases": [
+    {
+      "test_case": "qa.spec_1",
+      "objects": [
+        "page",
+        "body"
+      ],
+      "goals": [
+        "Verify QA View page navigation and rendering"
+      ],
+      "activities": [
+        "Navigate to the QA View page and check its rendering."
+      ]
+    },
+    {
+      "test_case": "qa.spec_2",
+      "objects": [
+        "metrics"
+      ],
+      "goals": [
+        "Check that the count of QA metric or card elements is greater than or equal to zero."
+      ],
+      "activities": [
+        "Mock the API routes, navigate to /qa, and wait for the application",
+        "Locate elements whose classes contain qa, metric, card, or quality",
+        "Count the selected elements",
+        "Assert that the count is greater than or equal to 0; an empty selection also passes"
+      ]
+    },
+    {
+      "test_case": "qa.spec_3",
+      "objects": [
+        "results"
+      ],
+      "goals": [
+        "Check that the count of test-result or status elements is greater than or equal to zero."
+      ],
+      "activities": [
+        "Mock the API routes, navigate to /qa, and wait for the application",
+        "Locate elements whose classes contain test, result, status, or gate",
+        "Count the selected elements",
+        "Assert that the count is greater than or equal to 0; an empty selection also passes"
+      ]
+    },
+    {
+      "test_case": "qa.spec_4",
+      "objects": [
+        "charts"
+      ],
+      "goals": [
+        "Check that the count of coverage or chart elements is greater than or equal to zero."
+      ],
+      "activities": [
+        "Mock the API routes, navigate to /qa, and wait for the application",
+        "Locate svg or canvas elements and elements whose classes contain chart, coverage, or progress",
+        "Count the selected elements",
+        "Assert that the count is greater than or equal to 0; an empty selection also passes"
+      ]
+    }
+  ]
+}

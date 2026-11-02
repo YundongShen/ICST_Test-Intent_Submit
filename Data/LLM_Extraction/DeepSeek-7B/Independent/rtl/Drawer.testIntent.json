@@ -1,0 +1,25 @@
+{
+  "test_case_id": "tc_Drawer_test",
+  "source_file": "dataset/raw/rtl/Drawer.test.tsx",
+  "framework": "rtl",
+  "extraction_timestamp": "2026-08-10T08:00:35.757747",
+  "extract_mode": "independent",
+  "model": "DeepSeek-LLM-7B-Chat",
+  "test_cases": [
+    {
+      "test_case": "Drawer.test",
+      "objects": [
+        "Drawer",
+        "DrawerItems",
+        "DrawerHeader",
+        "userEvent"
+      ],
+      "goals": [
+        "Verify the external toggle button's functionality on the Drawer component."
+      ],
+      "activities": [
+        "Use the external toggle button and check the Drawer component's behavior."
+      ]
+    }
+  ]
+}
